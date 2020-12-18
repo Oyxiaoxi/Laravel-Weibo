@@ -5,7 +5,7 @@
  * @Autor: Oyxiaoxi
  * @Date: 2020-12-17 13:47:37
  * @LastEditors: Oyxiaoxi
- * @LastEditTime: 2020-12-18 11:06:14
+ * @LastEditTime: 2020-12-18 11:48:19
  */
 
 use Illuminate\Support\Facades\Route;
@@ -26,3 +26,4 @@ Route::get('/help', 'StaticPagesController@help')->name('help');
 Route::get('/about', 'StaticPagesController@about')->name('about');
 
 Route::get('signup', 'UsersController@create')->name('signup');
+Route::resource('users', 'UsersController');
