@@ -1,12 +1,4 @@
 <?php
-/*
- * @Description:
- * @Version: 2.0
- * @Autor: Oyxiaoxi
- * @Date: 2020-12-17 13:47:37
- * @LastEditors: Oyxiaoxi
- * @LastEditTime: 2020-12-18 11:48:19
- */
 
 use Illuminate\Support\Facades\Route;
 
@@ -27,3 +19,7 @@ Route::get('/about', 'StaticPagesController@about')->name('about');
 
 Route::get('signup', 'UsersController@create')->name('signup');
 Route::resource('users', 'UsersController');
+
+Route::get('login', 'SessionsController@create')->name('login');
+Route::post('login', 'SessionsController@store')->name('login');
+Route::delete('logout', 'SessionsController@destroy')->name('logout');
